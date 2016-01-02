@@ -157,7 +157,7 @@ store.transform((context, record, update) =&gt; {
   record.timestamp = record.timestamp.toLocaleString()
   <span class="hljs-keyword">return</span> record
 })
-</code></pre><p>Requests to update a record will have the updates already applied to the record.</p><h2 id="fortune-transforminput">Fortune.<span class="key">transformInput</span><!--
+</code></pre><p>Requests to update a record will <strong>NOT</strong> have the updates already applied to the record.</p><p>Another feature of the input transform is that it will have access to a temporary field <code>context.transaction</code>. This is useful for ensuring that bulk write operations are all or nothing. Each request is treated as a single transaction.</p><h2 id="fortune-transforminput">Fortune.<span class="key">transformInput</span><!--
         --><!--
           -->(<span class="parameter" title="String">[type]</span>, <span class="parameter" title="Function">fn</span>)<!--
         --><!--
@@ -394,4 +394,4 @@ store.transform((context, record, update) =&gt; {
     <span class="hljs-attribute">bufferEncoding</span>: <span class="hljs-string">'base64'</span>
   }
 }
-</code></pre><hr></div></article><footer><p>&copy; 2015 &nbsp;&mdash;&nbsp; <a href="https://raw.githubusercontent.com/fortunejs/fortune/master/LICENSE">MIT License</a></p><p>福</p></footer></body></html>
+</code></pre><hr></div></article><footer><p>&copy; 2016 &nbsp;&mdash;&nbsp; <a href="https://raw.githubusercontent.com/fortunejs/fortune/master/LICENSE">MIT License</a></p><p>福</p></footer></body></html>
