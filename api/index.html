@@ -18,28 +18,28 @@ https://github.com/fortunejs/fortune/tree/master/website
         --><!--
       --><a href="#fortune-constructor" class="anchor">#</a></h2><p>Create a new instance. The options object may be as follows:</p><pre><code class="lang-js">{
   <span class="hljs-comment">// Adapter configuration. Default: `memoryAdapter`</span>
-  adapter: {
+<span class="hljs-symbol">  adapter:</span> {
     <span class="hljs-comment">// Must be a class that extends `Fortune.Adapter`, or a function</span>
     <span class="hljs-comment">// that accepts the Adapter class and returns a subclass. Required.</span>
-    <span class="hljs-class"><span class="hljs-keyword">type</span>: <span class="hljs-title">Adapter</span> </span>=&gt; { ... },
+<span class="hljs-symbol">    type:</span> Adapter =&gt; { ... },
 
     <span class="hljs-comment">// An options object that is specific to the adapter. Optional.</span>
-    options: { ... }
+<span class="hljs-symbol">    options:</span> { ... }
   },
 
   <span class="hljs-comment">// Serializers ordered by priority. Default: ad hoc JSON-over-HTTP.</span>
-  serializers: [{
+<span class="hljs-symbol">  serializers:</span> [{
     <span class="hljs-comment">// Must be a class that extends `Fortune.Serializer`, or a function</span>
     <span class="hljs-comment">// that accepts the Serializer class and returns a subclass. Required.</span>
-    <span class="hljs-class"><span class="hljs-keyword">type</span>: <span class="hljs-title">Serializer</span> </span>=&gt; { ... },
+<span class="hljs-symbol">    type:</span> Serializer =&gt; { ... },
 
     <span class="hljs-comment">// An options object that is specific to the serializer. Optional.</span>
-    options: { ... }
+<span class="hljs-symbol">    options:</span> { ... }
   }],
 
   <span class="hljs-comment">// Whether or not to enforce referential integrity. Default: `true` for</span>
   <span class="hljs-comment">// server, `false` for browser.</span>
-  enforceLinks: <span class="hljs-keyword">true</span>
+<span class="hljs-symbol">  enforceLinks:</span> true
 }
 </code></pre><h2 id="fortune-connect">Fortune.<span class="key">connect</span><!--
         --><!--
