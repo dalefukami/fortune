@@ -237,7 +237,7 @@ store.transform((context, record, update) =&gt; {
   <span class="hljs-comment">// Reserved field for custom querying.</span>
   <span class="hljs-attribute">query</span>: null
 }
-</code></pre><p>For each of the defined query objects, the logical operator should be &quot;and&quot;. The <code>query</code> field may be used on a per adapter basis to provide custom querying functionality.</p><p>The syntax of the <code>sort</code> object is as follows:</p><pre><code class="lang-js">{
+</code></pre><p>For the fields <code>exists</code>, <code>match</code>, and <code>range</code>, the logical operator should be &quot;and&quot;. The <code>query</code> field may be used on a per adapter basis to provide custom querying functionality.</p><p>The syntax of the <code>sort</code> object is as follows:</p><pre><code class="lang-js">{
   <span class="hljs-attribute">age</span>: false, <span class="hljs-comment">// descending</span>
   <span class="hljs-attribute">name</span>: true <span class="hljs-comment">// ascending</span>
 }
