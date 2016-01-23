@@ -283,10 +283,10 @@ store.transform((context, record, update) =&gt; {
   <span class="hljs-comment">// the values should be removed.</span>
 <span class="hljs-symbol">  pull:</span> { <span class="hljs-string">friends:</span> [ <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ] },
 
-  <span class="hljs-comment">// The `operate` object is specific to the adapter. This should take</span>
+  <span class="hljs-comment">// The `operate` field is specific to the adapter. This should take</span>
   <span class="hljs-comment">// precedence over all of the above. Warning: using this may bypass</span>
   <span class="hljs-comment">// field definitions and referential integrity. Use at your own risk.</span>
-<span class="hljs-symbol">  operate:</span> { ... }
+<span class="hljs-symbol">  operate:</span> <span class="hljs-literal">null</span>
 }
 </code></pre><p>Things to consider:</p><ul><li><code>push</code> and <code>pull</code> can not be applied to non-arrays.</li><li>The same value in the same field should not exist in both <code>push</code> and <code>pull</code>.</li></ul><h2 id="adapter-delete">Adapter.<span class="key">delete</span><!--
         --><!--
