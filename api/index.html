@@ -56,7 +56,7 @@ https://github.com/fortunejs/fortune/tree/master/website
   input (context, record, update) {
     <span class="hljs-keyword">const</span> <span class="hljs-keyword">method</span> = context.request.<span class="hljs-keyword">method</span>
 
-    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">method</span> === 'find') {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">method</span> === 'create') {
       record.timestamp = new <span class="hljs-type">Date</span>()
       <span class="hljs-keyword">return</span> record
     }
