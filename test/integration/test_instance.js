@@ -104,9 +104,6 @@ module.exports = options => {
   }, options))
 
   store.on(change, data => {
-    for (let symbol of Object.getOwnPropertySymbols(data))
-      assignDescription(data, symbol)
-
     stderr.info(chalk.bold('Change event:'), data)
   })
 
@@ -128,10 +125,4 @@ module.exports = options => {
     store.disconnect()
     throw error
   })
-}
-
-
-function assignDescription (object, symbol) {
-  const description = (symbol.toString().match(inParens) || [])[1]
-  if (description) object[description] = object[symbol]
 }
